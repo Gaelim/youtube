@@ -1,0 +1,23 @@
+WITH customer_sales AS (
+    SELECT 
+        customer_id,
+        SUM(sale_amount) AS total
+    FROM sales
+    WHERE sale_date BETWEEN '2023-01-01' AND '2023-12-31'
+    GROUP BY customer_id), 
+sale_rank AS (
+    SELECT 
+        customer_id,
+        total,
+        PERCENT_RANK() OVER (
+            ORDER BY total DESC
+        ) AS ranking
+    FROM customer_sales
+)
+SELECT customer_id, total
+FROM sale_rank
+WHERE ranking <= 0.25
+
+
+
+
