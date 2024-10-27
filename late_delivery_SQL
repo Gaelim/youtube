@@ -1,0 +1,22 @@
+*Calculate Late Deliveries Percentage
+	UBER SQL Interview Question */
+with delivery_analysis as (
+select 
+order_id,
+provider_id,
+datediff(day,order_date,delivery_date)
+as delivery_days,
+case when
+	datediff(day,order_date,delivery_date)
+> 3 then 1 else 0 end as is_late
+from orders_data)
+
+select
+provider_id,
+count(order_id) as total_orders,
+sum(is_late) as late_deliveries,
+sum(is_late)*1.0/count(order_id) *100
+as late_delivery_percent
+from
+delivery_analysis
+group by provider_id
