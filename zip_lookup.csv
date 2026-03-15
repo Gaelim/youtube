@@ -1,0 +1,34 @@
+zip_code,region,city
+10001,Northeast,New York
+10002,Northeast,New York
+10003,Northeast,New York
+02101,Northeast,Boston
+02102,Northeast,Boston
+19101,Northeast,Philadelphia
+19102,Northeast,Philadelphia
+06101,Northeast,Hartford
+07101,Northeast,Newark
+77001,South,Houston
+77002,South,Houston
+33101,South,Miami
+33102,South,Miami
+30301,South,Atlanta
+30302,South,Atlanta
+27601,South,Raleigh
+23219,South,Richmond
+60601,Midwest,Chicago
+60602,Midwest,Chicago
+48201,Midwest,Detroit
+48202,Midwest,Detroit
+55401,Midwest,Minneapolis
+55402,Midwest,Minneapolis
+43201,Midwest,Columbus
+53201,Midwest,Milwaukee
+90001,West,Los Angeles
+90210,West,Los Angeles
+98101,West,Seattle
+98102,West,Seattle
+97201,West,Portland
+85001,West,Phoenix
+94101,West,San Francisco
+94102,West,San Francisco
